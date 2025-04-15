@@ -13,7 +13,7 @@ body {
 
 /* Encabezado central */
 .header-centro-estudios {
-    background-color: #ffffff;
+    background-color: #DDDDE2;
     padding: 20px;
     text-align: center;
     font-size: 24px;
@@ -24,7 +24,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    text-shadow: 1px 1px 2px rgba(34, 34, 34, 0.5);
+    text-shadow: 1px 1px 2px rgb(175 175 175 / 50%)
 }
 
 .header-centro-estudios img {
@@ -57,7 +57,7 @@ body {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 5px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: -4px 4px 2px rgba(0, 0, 0, 0.2)
 }
 
 .subtitulo {
