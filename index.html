@@ -59,9 +59,7 @@
         </div>
 
         <div class="content" id="content">
-            <!--Contenedor del semestre seleccionado -->
             <div id="semester-container" class="semester-container"></div>
-            <!-- Contenedor para mostrar la información -->
             <div id="info-container" class="info-container"></div>
         </div>
     </div>
@@ -93,21 +91,19 @@
         function mostrarSemestre(semestre) {
             const container = document.getElementById('semester-container');
             const infoContainer = document.getElementById('info-container');
-            container.innerHTML = ''; // Limpiar contenido anterior
-            infoContainer.innerHTML = ''; // Limpiar información anterior
+            container.innerHTML = '';
+            infoContainer.innerHTML = '';
 
-            //  Contenedor para los botones
             const buttonsContainer = document.createElement('div');
             buttonsContainer.className = 'semester-buttons';
 
-            // Función para añadir un espacio cada 2 palabras
             function formatearNombreMateria(nombre) {
                 return nombre.split(' ').map((palabra, index) => 
                     (index > 0 && index % 2 === 0) ? ` ${palabra}` : palabra
                 ).join(' ');
             }
 
-            // Definir las materias para cada semestre
+            // materias para cada semestre, NOTA: el nombre de la materia en el else if DEBE llevar sus \n
             const materiasPorSemestre = {
                 1: [
                     "ÁLGEBRA",
@@ -163,12 +159,11 @@
                 ]
             };
 
-// Verificar si el semestre tiene materias definidas
 if (materiasPorSemestre[semestre]) {
-    // Botones con los nombres de las materias formateados
+
     materiasPorSemestre[semestre].forEach((materia, index) => {
         const button = document.createElement('button');
-        button.innerText = formatearNombreMateria(materia); // Formatear el nombre
+        button.innerText = formatearNombreMateria(materia);
         button.onclick = () => {
             if (materia === "QUIMICA II") {
                 // QUIMICA II
@@ -183,7 +178,7 @@ if (materiasPorSemestre[semestre]) {
                 infoContainer.innerHTML = `<iframe src="area_basica/archivo_tabla_1S_ALGEBRA.html"></iframe>`;
             } 
             else if (materia === "GEOMETRÍA \nY \nTRIGONOMETRÍA") {
-                // ÁLGEBRA
+                // GEOMETRIA Y TRIGONOMETRIA
                 infoContainer.innerHTML = `<iframe src="area_basica/archivo_tabla_2S_GEOMETRIA_TRIGONOMETRIA.html"></iframe>`;
             } 
             else if (materia === "INGLÉS II") {
@@ -266,19 +261,19 @@ if (materiasPorSemestre[semestre]) {
                 infoContainer.innerHTML = `<iframe src="area_basica/archivo_tabla_2S_BIOLOGIA.html"></iframe>`;
             } 
             else {
-                // Mostrar información genérica para las otras materias
+                // información genérica para las otras materias
                 infoContainer.innerHTML = `
                     <h2>${formatearNombreMateria(materia)}</h2>
                     <p>Información detallada sobre ${formatearNombreMateria(materia)} del Semestre ${semestre}.</p>
                 `;
             }
             
-            infoContainer.style.display = 'block'; // Mostrar el contenedor de información
+            infoContainer.style.display = 'block';
         };
         buttonsContainer.appendChild(button);
     });
             } else {
-                // Para semestres o opciones sin informacion, mostrar las opciones genéricas (Opción 1, Opción 2, etc.)
+                // opciones genéricas (Opción 1, Opción 2, etc.) SOLO PARA NUEVOS else if
                 for (let i = 1; i <= 10; i++) {
                     const button = document.createElement('button');
                     button.innerText = `Opción ${i}`;
@@ -287,24 +282,20 @@ if (materiasPorSemestre[semestre]) {
                 }
             }
 
-            // botón de cerrar
             const closeButton = document.createElement('button');
             closeButton.innerText = 'Cerrar';
             closeButton.className = 'close-button';
             closeButton.onclick = () => {
-                container.style.display = 'none'; // Ocultar el contenedor del semestre
-                infoContainer.style.display = 'none'; // Ocultar el contenedor de información
+                container.style.display = 'none';
+                infoContainer.style.display = 'none'; 
             };
 
-            // Agregar botones y botón de cerrar al contenedor
             container.appendChild(buttonsContainer);
             container.appendChild(closeButton);
 
-            // Mostrar el contenedor del semestre
             container.style.display = 'flex';
         }
         
-        // Función para mostrar información adicional en el contenedor de información
         function mostrarInformacionAdicional() {
             const infoContainer = document.getElementById('info-container');
             infoContainer.innerHTML = `
@@ -356,10 +347,9 @@ if (materiasPorSemestre[semestre]) {
     </li>
 </ol>
             `;
-            infoContainer.style.display = 'block'; // Mostrar el contenedor de información
+            infoContainer.style.display = 'block';
         }
 
-        // Función para mostrar el objetivo e instrucciones al inicio
         function mostrarInicio() {
             const infoContainer = document.getElementById('info-container');
             infoContainer.innerHTML = `
@@ -388,10 +378,9 @@ if (materiasPorSemestre[semestre]) {
                  En caso de encontrar imprecisiones en la información, se deberá enviar una solicitud de corrección a través del botón correspondiente, el cual redirigirá al correo electrónico designado para este propósito.
                 </p>
             `;
-            infoContainer.style.display = 'block'; // Mostrar el contenedor de información
+            infoContainer.style.display = 'block';
         }
 
-        // Llamada a la función al cargar la página :)
         window.onload = mostrarInicio;
     </script>
 </body>
