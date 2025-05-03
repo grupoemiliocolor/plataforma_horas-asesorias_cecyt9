@@ -117,6 +117,7 @@ body {
     display: flex;
     gap: 20px;
     min-height: 0;
+    width: 400px;
 }
 
 .semester-container {
@@ -271,6 +272,7 @@ iframe {
     .header-horarios {
         font-size: 16px;
         padding: 8px 5px;
+        width: 409px;
     }
     
     .container {
