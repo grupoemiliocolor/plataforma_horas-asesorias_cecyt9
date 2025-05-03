@@ -30,13 +30,14 @@ body {
 }
 
 .header-horarios {
-    background-color: #800000;
-    padding: 10px;
-    text-align: center;
-    font-size: 18px;
+    font-size: 4vw;
+    padding: 6vw 3vw;
+    width: 100%;
+    box-sizing: border-box;
     color: white;
+    background-color: #800000;
+    text-align: center;
 }
-
 .encabezado {
     text-align: center;
     font-family: "Arial Black", "Arial Bold", sans-serif;
@@ -117,7 +118,7 @@ body {
     display: flex;
     gap: 20px;
     min-height: 0;
-    width: 400px;
+    width: auto;
 }
 
 .semester-container {
@@ -272,7 +273,7 @@ iframe {
     .header-horarios {
         font-size: 16px;
         padding: 8px 5px;
-        width: 409px;
+        width: auto;
     }
     
     .container {
