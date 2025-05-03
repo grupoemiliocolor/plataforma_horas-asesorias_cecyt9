@@ -30,14 +30,13 @@ body {
 }
 
 .header-horarios {
-    font-size: 4vw;
-    padding: 6vw 3vw;
-    width: 100%;
-    box-sizing: border-box;
-    color: white;
     background-color: #800000;
+    padding: 10px;
     text-align: center;
+    font-size: 18px;
+    color: white;
 }
+
 .encabezado {
     text-align: center;
     font-family: "Arial Black", "Arial Bold", sans-serif;
