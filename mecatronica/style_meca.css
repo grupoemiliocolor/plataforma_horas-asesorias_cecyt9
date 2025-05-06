@@ -1,30 +1,45 @@
-/* Estilos generales */
-body {
-    font-family: Arial, Helvetica, sans-serif;
+/* ===== ESTILOS BASE ===== */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #DDDDE2;
     color: #333;
     font-weight: bold;
+    line-height: 1.4;
 }
 
-/* Encabezado central */
+/* ===== ESTRUCTURA PRINCIPAL ===== */
+.header-centro-estudios,
+.header-horarios,
+.encabezado,
+.container,
+#footer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ===== HEADERS ===== */
 .header-centro-estudios {
     background-color: #DDDDE2;
     padding: 20px;
     text-align: center;
     font-size: 24px;
     color: #700000;
-    font-weight: bold;
     border-bottom: 2px solid #D0D0D4;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    text-shadow: 1px 1px 2px rgba(34, 34, 34, 0.5);
+    text-shadow: -5px 5px 2px rgb(175 175 175 / 50%);
 }
 
 .header-centro-estudios img {
@@ -32,7 +47,6 @@ body {
     margin: 0 20px;
 }
 
-/* Encabezado de horarios */
 .header-horarios {
     background-color: #800000;
     padding: 10px;
@@ -41,59 +55,62 @@ body {
     color: white;
 }
 
-/* Contenedor de PROGRAMA HORAS - compacto */
 .encabezado {
     text-align: center;
     font-family: "Arial Black", "Arial Bold", sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin: -15px 0;  /* Reducí a -15px */
     background-color: #DDDDE2;
     padding: 8px 1px;
 }
 
 .titulo-principal {
-    color: #9E0B0F; /* Guinda */
+    color: #9E0B0F;
     font-size: 24px;
-    font-weight: bold;
     margin-bottom: 5px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: -4px 4px 2px rgba(0, 0, 0, 0.2);
 }
 
 .subtitulo {
-    color: #666666; /* Gris */
+    color: #666666;
     font-size: 18px;
     font-weight: normal;
     margin-top: 0;
 }
 
-/* Contenedor principal */
+/* ===== CONTENEDOR PRINCIPAL ===== */
 .container {
     display: flex;
     flex: 1;
-}
-
-/* Menú lateral */
-.options {
-    width: 200px;
+    min-height: 0;
     background-color: white;
-    padding: 15px;
-    border-right: 2px solid #003366;
 }
 
-/* Estilos compartidos para botones */
+/* ===== PANEL IZQUIERDO (OPTIONS) - COMPACTO ===== */
+.options {
+    width: 220px;
+    background-color: white;
+    padding: 10px; /* Reducido de 15px */
+    border-right: 2px solid #003366;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px; /* Reducido de 12px */
+}
+
+/* ===== BOTONES PRINCIPALES - COMPACTOS ===== */
 .semestre-button,
 .creditos-button,
-.informacion-button {
+.informacion-button,
+.casa-button {
     display: block;
-    width: 180px;
-    height: 50px;
-    padding: 8px;
-    margin-bottom: 10px;
+    width: 100%;
+    height: 40px; /* Reducido de 50px */
+    padding: 5px 8px; /* Reducido de 8px */
     border: none;
     cursor: pointer;
     text-align: center;
-    font-size: 14px;
+    font-size: 13px; /* Reducido de 14px */
     transition: filter 0.1s ease;
     border-radius: 0;
     white-space: nowrap;
@@ -110,49 +127,60 @@ body {
     color: white;
 }
 
+.casa-button {
+    background-color: #800000;
+    color: white;
+}
+
 .semestre-button:hover,
 .creditos-button:hover,
-.informacion-button:hover {
+.informacion-button:hover,
+.casa-button:hover {
     filter: brightness(1.2);
 }
 
-/* Contenido principal */
+/* ===== CONTENIDO CENTRAL ===== */
 .content {
     flex: 1;
-    padding: 20px;
+    padding: 15px; /* Reducido de 20px */
     background-color: white;
     display: flex;
-    gap: 20px;
+    gap: 15px; /* Reducido de 20px */
+    min-height: 0;
+    overflow: auto;
 }
 
-/* Semestres */
+/* ===== PANEL DE SEMESTRES - COMPACTO ===== */
 .semester-container {
     display: none;
     flex-direction: column;
-    width: 140px;
+    width: 220px;
     background-color: white;
-    padding: 15px;
+    padding: 10px; /* Reducido de 15px */
     border-right: 2px solid #003366;
+    overflow-y: auto;
+    flex-shrink: 0;
+    gap: 6px; /* Reducido de 12px */
 }
 
 .semester-buttons {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 6px; /* Reducido de 10px */
 }
 
 .semester-buttons button {
     background-color: #003366;
     color: white;
     border: none;
-    padding: 8px;
+    padding: 6px; /* Reducido de 8px */
     cursor: pointer;
     text-align: center;
-    font-size: 12px;
+    font-size: 11px; /* Reducido de 12px */
     transition: filter 0.1s ease;
     border-radius: 0;
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 80px; /* Reducido de 100px */
     white-space: nowrap;
 }
 
@@ -161,18 +189,18 @@ body {
 }
 
 .close-button {
-    background-color: #666; 
+    background-color: #666;
     color: white;
     border: none;
-    padding: 8px;
+    padding: 6px; /* Reducido de 8px */
     cursor: pointer;
     text-align: center;
-    font-size: 12px;
+    font-size: 11px; /* Reducido de 12px */
     transition: filter 0.1s ease;
     border-radius: 0;
-    margin-top: 10px;
-    width: 100px;
-    height: 40px;
+    margin-top: 8px; /* Reducido de 10px */
+    width: 100%;
+    height: 35px; /* Reducido de 40px */
     white-space: nowrap;
 }
 
@@ -180,40 +208,42 @@ body {
     filter: brightness(1.2);
 }
 
-/* Información */
+/* ===== PANEL DE INFORMACIÓN ===== */
 .info-container {
     flex: 1;
-    padding: 20px;
+    padding: 15px; /* Reducido de 20px */
     background-color: #f1f1f1;
     border-radius: 8px;
     display: none;
+    overflow: auto;
+    min-height: 300px;
 }
 
 iframe {
     width: 100%;
     height: 100%;
+    min-height: 400px;
     border: none;
 }
 
-/* Pie de página */
+/* ===== FOOTER ===== */
 #footer {
     background-color: #DDDDE2;
-    margin: auto 0;
+    margin-top: auto;
     width: 100%;
-    height: 200px;
     color: white;
     text-align: center;
     border-top-style: solid;
     border-top-color: #D0D0D4;
     border-top-width: thick;
+    flex-shrink: 0;
 }
 
 #FooterContainer {
     width: 880px;
     margin: 0 auto;
-    height: 110px;
+    padding: 15px 0; /* Reducido de 20px */
     color: #78668C;
-    padding-top: 40px;
 }
 
 #FooterContainer span {
@@ -223,27 +253,145 @@ iframe {
     text-shadow: 1px 1px 2px rgba(44, 44, 44, 0.5);
 }
 
-/* boton regreso a index */
-.casa-button {
-    display: block;
-    width: 180px;       /* Mismo ancho que otros botones */
-    height: auto;       /* Altura automática para texto multilínea */
-    min-height: 50px;   /* Altura mínima igual a otros botones */
-    padding: 8px 5px;   /* Padding ajustado */
-    margin-bottom: 10px;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    font-size: 14px;
-    transition: filter 0.1s ease;
-    border-radius: 0;
-    white-space: normal; /* Saltos de línea */
-    background-color: #800000; /* Color guinda */
-    color: white;
-    word-wrap: break-word;
-    overflow: hidden; /* Para evitar desbordamiento */
+/* ===== DISEÑO RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .header-centro-estudios {
+        flex-direction: column;
+        padding: 15px 10px;
+        font-size: 18px;
+        gap: 10px;
+    }
+    
+    .header-centro-estudios img {
+        height: 60px;
+        margin: 5px 0;
+    }
+    
+    .encabezado {
+        padding: 8px 5px; /* Ajustado */
+        margin: 0;
+    }
+    
+    .titulo-principal {
+        font-size: 20px;
+        margin-bottom: 3px;
+    }
+    
+    .subtitulo {
+        font-size: 16px;
+        margin-top: 0;
+    }
+    
+    .header-horarios {
+        font-size: 16px;
+        padding: 8px 5px;
+    }
+    
+    .container {
+        flex-direction: column;
+    }
+    
+    .options {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px; /* Reducido de 10px */
+        padding: 8px; /* Reducido de 10px */
+        border-right: none;
+        border-bottom: 2px solid #003366;
+    }
+    
+    .semestre-button,
+    .creditos-button,
+    .informacion-button,
+    .casa-button {
+        width: calc(50% - 5px); /* Ajustado para nuevo gap */
+        height: 38px; /* Reducido de auto/50px */
+        min-height: 38px; /* Reducido */
+        margin: 0;
+        font-size: 12px;
+    }
+    
+    .content {
+        flex-direction: column;
+        padding: 8px; /* Reducido de 10px */
+        min-height: 400px;
+    }
+    
+    .semester-container {
+        width: 100%;
+        padding: 8px; /* Reducido de 10px */
+        border-right: none;
+        border-bottom: 2px solid #003366;
+    }
+    
+    .semester-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px; /* Reducido de 10px */
+    }
+    
+    .semester-buttons button {
+        width: calc(33% - 5px); /* Ajustado para nuevo gap */
+        height: 70px; /* Reducido de 80px */
+        font-size: 11px;
+    }
+    
+    .close-button {
+        width: 100%;
+        margin-top: 8px; /* Reducido de 15px */
+        height: 35px; /* Reducido de 40px */
+    }
+    
+    .info-container {
+        min-height: 400px;
+        padding: 12px; /* Reducido de 15px */
+    }
+    
+    iframe {
+        min-height: 500px;
+    }
 }
 
-.casa-button:hover {
-    filter: brightness(1.2);
+@media (max-width: 480px) {
+    .header-centro-estudios {
+        font-size: 16px;
+    }
+    
+    .header-centro-estudios img {
+        height: 50px;
+    }
+    
+    .titulo-principal {
+        font-size: 18px;
+    }
+    
+    .subtitulo {
+        font-size: 14px;
+    }
+    
+    .header-horarios {
+        font-size: 14px;
+    }
+    
+    .semestre-button,
+    .creditos-button,
+    .informacion-button,
+    .casa-button {
+        width: 100%;
+        font-size: 11px; /* Reducido de 12px */
+        height: 36px; /* Reducido */
+    }
+    
+    .semester-buttons button {
+        width: calc(50% - 5px); /* Ajustado para nuevo gap */
+        height: 65px; /* Reducido de 70px */
+        font-size: 10px;
+    }
+    
+    #FooterContainer span {
+        font-size: 13px;
+    }
 }
