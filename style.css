@@ -458,3 +458,8 @@ body {
         font-size: 14px;
     }
 }
+    .info-container p,
+    .info-container li {
+        font-size: 14px;
+    }
+}
