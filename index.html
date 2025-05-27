@@ -1,381 +1,185 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asesorías CECyT 9 - Juan de Dios Bátiz</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" href="https://www.ipn.mx/assets/files/main/img/template/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio no disponible</title>
+    <!--
+    Copyright © 2025 Grupo EmilioColor®. 
+    Todos los derechos reservados. 
+    Esta plantilla y todo su contenido son propiedad exclusiva de Grupo EmilioColor® y están protegidos por las leyes de derechos de autor.
+    Queda prohibida la reproducción total o parcial sin la autorización expresa del titular de los derechos.
+    -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+            color: #333;
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 800px;
+            margin-top: 3vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffffff;
+        }
+
+        .content-box {
+            width: 90%;
+            padding: 1.5rem;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 0;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.8rem;
+            color: #2c3e50;
+        }
+
+        .icon {
+            font-size: 4rem;
+            margin: 0.3rem 0 1rem 0;
+            color: #e74c3c;
+        }
+
+        p {
+            font-size: 1.3rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.5;
+        }
+
+        .reasons {
+            text-align: left;
+            margin: 1rem 0;
+            padding: 0 1.2rem;
+            background-color: #ffffff;
+        }
+
+        .reason {
+            margin-bottom: 0.6rem;
+            font-size: 1rem;
+            padding-left: 1.2rem;
+            position: relative;
+            background-color: #ffffff;
+        }
+
+        .reason:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #e74c3c;
+            font-size: 1.3rem;
+        }
+
+        .logo-container {
+            margin: 0.8rem 0 1.5rem 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+
+        .logo-circle {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background-color: #2c3e50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 0.5rem auto;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .logo-circle:hover {
+            transform: scale(1.05);
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+            max-width: 100%;
+            display: block;
+        }
+
+        .brand-text {
+            color: #999;
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        .registered {
+            font-size: 0.7rem;
+            vertical-align: super;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+            
+            .content-box {
+                padding: 1rem;
+                width: 85%;
+            }
+            
+            .logo-circle {
+                width: 130px;
+                height: 130px;
+            }
+            
+            .logo {
+                width: 80px;
+            }
+
+            .brand-text {
+                font-size: 0.9rem;
+            }
+
+            .registered {
+                font-size: 0.6rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="header-centro-estudios">
-        <a href="https://www.ipn.mx/" target="_blank">
-            <img src="img/Poli.png" alt="Logo IPN">
-        </a>
-        Centro de Estudios Científicos y Tecnológicos 9<br>
-       "Juan de Dios Bátiz"
-        <a href="https://www.cecyt9.ipn.mx/" target="_blank">
-            <img src="img/JDB9.png" alt="Logo CECyT 9">
-        </a>
-    </div>
-    <div class="encabezado">
-        <h1 class="titulo-principal">PLATAFORMA HORAS</h1>
-        <h2 class="subtitulo">2025-2</h2>
-    </div>
-    <div class="header-horarios">
-        HORARIOS DE ASESORÍAS PARA<br>MATERIAS DE ÁREA BÁSICA Y HUMANÍSTICA
-    </div>
-
-    <div class="container">
-        <div class="options">
-             <!--<button class="semestre-button" onclick="mostrarSemestre(1)">PRIMER SEMESTRE</button>-->
-            <button class="semestre-button" onclick="mostrarSemestre(2)">SEGUNDO SEMESTRE</button>
-             <!--<button class="semestre-button" onclick="mostrarSemestre(3)">TERCER SEMESTRE</button>-->
-            <button class="semestre-button" onclick="mostrarSemestre(4)">CUARTO SEMESTRE</button>
-           <!--<button class="semestre-button" onclick="mostrarSemestre(5)">QUINTO SEMESTRE</button>-->
-            <button class="semestre-button" onclick="mostrarSemestre(6)">SEXTO SEMESTRE</button>
-            <!-- <button class="semestre-button" onclick="mostrarSemestre(0)">ASESORÍA EN GRUPO</button>-->
-            <button class="mecatronica-button" onclick="window.location.href='tecnico_en_mecatronica/inicio.html'">TÉCNICO EN <br>MECATRÓNICA</button>      
+    <div class="main-container">
+        <div class="content-box">
+            <div class="icon">🚧</div>
+            <h1>Página no disponible</h1>
+            <p>Lo sentimos, esta página no se encuentra accesible en este momento.</p>
             
-            <!-- 
-                 DESARRROLLADO POR EMILIO CALEP VARGAS YÁÑEZ
-                 INSTITUCIÓN: CECYT 9 - DURANTE SU: CUARTO SEMESTRE 
-                ---------------------------------------------
-                 FECHA DEL PROYECTO:      24/03/2025
-                 ÚLTIMA ACTUALIZACIÓN: 25/05/2025 
-                 ARCHIVOS TOTALES: 33
-            -->
+            <div class="reasons">
+                <div class="reason">El sitio puede estar en construcción y pronto estará disponible</div>
+                <div class="reason">O el repositorio pudo haber sido eliminado</div>
+            </div>
             
-                 <!-- Botón de quejas y sugerencias -->
-            <button class="creditos-button" onclick="window.location.href='mailto:emiliocolormexico@gmail.com'">Solicitar actualización o<br>corrección de información</button>
-            <button class="creditos-button" onclick="window.location.href='mailto:subdir_se_is@ipn.mx'">Quejas<br></button>            
-                <!-- Botón de información adicional -->
-            <button class="creditos-button" onclick="mostrarInformacionAdicional()">Créditos</button>
-        </div>
-
-        <div class="content" id="content">
-            <div id="semester-container" class="semester-container"></div>
-            <div id="info-container" class="info-container"></div>
+            <p>Por favor, inténtalo nuevamente más tarde.</p>
+            
+            <div class="logo-container">
+                <a href="https://grupoemiliocolor.github.io/mx" class="logo-circle">
+                    <img src="img/EC.png" alt="Logo EmilioColor" class="logo">
+                </a>
+                <div class="brand-text">EmilioColor<span class="registered">®</span> México</div>
+            </div>
         </div>
     </div>
-
-    <!-- Pie de página -->
-    <div id="footer">
-        <div id="FooterContainer">
-            <span>DIRECCIÓN</span>
-            <br />
-            CECyT 9-IPN | Mar Mediterr&aacute;neo # 227 | Col. Popotla | Del. Miguel Hidalgo<br>C.P. 11400 | Ciudad de M&eacute;xico | Tel&eacute;fono: 5729 6000 Ext. 63825. 
-                            <h5>Esta es una página oficial del Centro de Estudios Científicos y Tecnológicos 9 "Juan de Dios Bátiz"</h5>
-        </div>
-    </div>
-
-    <script>
-        const titulos = [
-            "Sin información 1",
-            "Sin información 2",
-            "Sin información 3",
-            "Sin información 4",
-            "Sin información 5",
-            "Sin información 6",
-            "Sin información 7",
-            "Sin información 8",
-            "Sin información 9",
-            "Sin información 0",
-        ];
-
-        function mostrarSemestre(semestre) {
-            const container = document.getElementById('semester-container');
-            const infoContainer = document.getElementById('info-container');
-            container.innerHTML = '';
-            infoContainer.innerHTML = '';
-
-            const buttonsContainer = document.createElement('div');
-            buttonsContainer.className = 'semester-buttons';
-
-            function formatearNombreMateria(nombre) {
-                return nombre.split(' ').map((palabra, index) => 
-                    (index > 0 && index % 2 === 0) ? ` ${palabra}` : palabra
-                ).join(' ');
-            }
-
-            // materias para cada semestre, NOTA: el nombre de la materia en el else if DEBE llevar sus \n
-            const materiasPorSemestre = {
-                1: [
-                    "ÁLGEBRA",
-                    "FILOSOFÍA I",
-                    "COMPUTACIÓN \nBÁSICA I",
-                    "INGLÉS I",
-                    "EXPRESIÓN \nORAL Y \nESCRITA I",
-                    "DESARROLLO \nDE \nHABILIDADES \nDEL \nPENSAMIENTO",
-                    "HISTORIA DE \nMÉXICO \nCONTEMPORÁNEO\n I",
-                    "DESARROLLO \nPERSONAL",
-                    "ORIENTACIÓN \nJUVENIL Y \nPROFESIONAL I"
-                ],
-                2: [
-                    "GEOMETRÍA \nY \nTRIGONOMETRÍA",
-                    "FILOSOFÍA II",
-                    "COMPUTACIÓN \nBÁSICA II",
-                    "INGLÉS II",
-                    "EXPRESIÓN\n ORAL Y \nESCRITA II",
-                    "BIOLOGÍA",
-                    "HISTORIA\n DE \nMÉXICO \nCONTEMPORÁNEO\n II",
-                    "ORIENTACIÓN\n JUVENIL Y \nPROFESIONAL\n II",
-                    "TÉCNICAS\n DE \nINVESTIGACIÓN \nDE \nCAMPO"
-                ],
-                3: [
-                    "GEOMETRÍA \nANALÍTICA",
-                    "FÍSICA I",
-                    "QUÍMICA I",
-                    "INGLÉS III",
-                    "COMUNICACIÓN \nCIENTÍFICA",
-                    "DIBUJO\n TÉCNICO I",
-                    "ENTORNO \nSOCIOECONÓMICO \nDE MÉXICO"
-                ],
-                4: [
-                    "CÁLCULO \nDIFERENCIAL",
-                    "FÍSICA II",
-                    "QUIMICA II",
-                    "DIBUJO \nTÉCNICO II",
-                    "INGLÉS IV"
-                ],
-                5: [
-                    "CÁLCULO \nINTEGRAL",
-                    "FÍSICA III",
-                    "QUÍMICA III",
-                    "INGLÉS V",
-                    "ORIENTACIÓN \nJUVENIL Y \nPROFESIONAL III"
-                ],
-                6: [
-                    "PROBABILIDAD Y \nESTADÍSTICA",
-                    "FÍSICA IV",
-                    "QUÍMICA IV",
-                    "INGLÉS VI",
-                    "ORIENTACIÓN \nJUVENIL Y \nPROFESIONAL IV"
-                ]
-            };
-
-if (materiasPorSemestre[semestre]) {
-                // NO IBA A SER TAN FÁCIL...
-    materiasPorSemestre[semestre].forEach((materia, index) => {
-        const button = document.createElement('button');
-        button.innerText = formatearNombreMateria(materia);
-        button.onclick = () => {
-            if (materia === "QUIMICA II") {
-                // QUIMICA II
-                infoContainer.innerHTML = `<iframe src="area_basica_y_humanistica/archivo_tabla_4S_QUIMICA_II.html"></iframe>`;
-            } 
-            else if (materia === "DIBUJO \nTÉCNICO II") {
-                // DIBUJO TÉCNICO II
-                infoContainer.innerHTML = `<iframe src="area_basica_y_humanistica/archivo_tabla_4S_DIBUJO_II.html"></iframe>`;
-            } 
-            else if (materia === "ÁLGEBRA") {
-                // ÁLGEBRA
-                infoContainer.innerHTML = `<iframe src="area_basica_y_humanistica/archivo_tabla_1S_ALGEBRA.html"></iframe>`;
-            } 
-            else if (materia === "GEOMETRÍA \nY \nTRIGONOMETRÍA") {
-                // GEOMETRIA Y TRIGONOMETRIA
-                infoContainer.innerHTML = `<iframe src="area_basica_y_humanistica/archivo_tabla_2S_GEOMETRIA_TRIGONOMETRIA.html"></iframe>`;
-            } 
-            else if (materia === "INGLÉS II") {
-                // INGLÉS II
-                infoContainer.innerHTML = `<iframe src="area_basica_y_humanistica/archivo_tabla_2S_INGLES_II.html"></iframe>`;
-            } 
-            else if (materia === "EXPRESIÓN\n ORAL Y \nESCRITA II") {
-                // ESPAÑOL II
-                infoContainer.innerHTML = `<iframe src="area_basica_y_humanistica/archivo_tabla_2S_ESPANOL_II.html"></iframe>`;
-            } 
-            else if (materia === "HISTORIA\n DE \nMÉXICO \nCONTEMPORÁNEO\n II") {
-                // HISTORIA II
-                infoContainer.innerHTML = `<iframe src="area_basica_y_humanistica/archivo_tabla_2S_HISTORIA_II.html"></iframe>`;
-            } 
-            else if (materia === "TÉCNICAS\n DE \nINVESTIGACIÓN \nDE \nCAMPO") {
-                // TICS II
-                infoContainer.innerHTML = `<iframe src="area_basica_y_humanistica/archivo_tabla_2S_TICS.html"></iframe>`;
-            } 
-            else if (materia === "QUÍMICA I") {
-                // QUIMICA I
-                infoContainer.innerHTML = `<iframe src="area_basica_y_humanistica/archivo_tabla_3S_QUIMICA_I.html"></iframe>`;                        
-            } 
-            else if (materia === "GEOMETRÍA \nANALÍTICA") {
-                // ANALITICA
-                infoContainer.innerHTML = `<iframe src="area_basica_y_humanistica/archivo_tabla_3S_ANALITICA.html"></iframe>`;                        
-            } 
-            else if (materia === "CÁLCULO \nDIFERENCIAL") {
-                // CALCULO DIFERENCIAL
-                infoContainer.innerHTML = `<iframe src="area_basica_y_humanistica/archivo_tabla_4S_CALCULO.html"></iframe>`;                        
-            } 
-            else if (materia === "DIBUJO\n TÉCNICO I") {
-                // DIBUJO TÉCNICO I
-                infoContainer.innerHTML = `<iframe src="area_basica_y_humanistica/archivo_tabla_3S_DIBUJO_I.html"></iframe>`;
-            } 
-            else if (materia === "INGLÉS IV") {
-                // INGLÉS IV
-                infoContainer.innerHTML = `<iframe src="area_basica_y_humanistica/INGLES_IV.html"></iframe>`;
-            } 
-            else if (materia === "FÍSICA I") {
-                // FÍSICA I
-                infoContainer.innerHTML = `<iframe src="area_basica_y_humanistica/archivo_tabla_FISICA.html"></iframe>`;
-            } 
-            else if (materia === "FÍSICA II") {
-                // FÍSICA II
-                infoContainer.innerHTML = `<iframe src="area_basica_y_humanistica/archivo_tabla_FISICA.html"></iframe>`;
-                
-            } 
-            else if (materia === "FÍSICA III") {
-                // FÍSICA IIi
-                infoContainer.innerHTML = `<iframe src="area_basica_y_humanistica/archivo_tabla_FISICA.html"></iframe>`;
-                
-            } 
-            else if (materia === "FÍSICA IV") {
-                // FÍSICA Iv
-                infoContainer.innerHTML = `<iframe src="area_basica_y_humanistica/archivo_tabla_FISICA.html"></iframe>`;
-                
-            } 
-            else if (materia === "CÁLCULO \nINTEGRAL") {
-                // CALCULO INTEGRAL
-                infoContainer.innerHTML = `<iframe src="area_basica_y_humanistica/archivo_tabla_5S_CALCULO.html"></iframe>`;                        
-            } 
-            else if (materia === "QUÍMICA III") {
-                // QUIMICA III
-                infoContainer.innerHTML = `<iframe src="area_basica_y_humanistica/archivo_tabla_5S_QUIMICA_III.html"></iframe>`;                        
-            } 
-            else if (materia === "PROBABILIDAD Y \nESTADÍSTICA") {
-                // PROBABILIDAD Y ESTADISTICA
-                infoContainer.innerHTML = `<iframe src="area_basica_y_humanistica/archivo_tabla_6S_PROB.html"></iframe>`;                        
-            } 
-            else if (materia === "QUÍMICA IV") {
-                // QUIMICA IV
-                infoContainer.innerHTML = `<iframe src="area_basica_y_humanistica/archivo_tabla_6S_QUIMICA_IV.html"></iframe>`;                        
-            } 
-            else if (materia === "INGLÉS VI") {
-                // INGLÉS IV
-                infoContainer.innerHTML = `<iframe src="area_basica_y_humanistica/INGLES_IV.html"></iframe>`;
-            } 
-            else if (materia === "BIOLOGÍA") {
-                // BIOLOGÍA
-                infoContainer.innerHTML = `<iframe src="area_basica_y_humanistica/archivo_tabla_2S_BIOLOGIA.html"></iframe>`;
-            } 
-            else {
-                // información genérica para las otras materias
-                infoContainer.innerHTML = `
-                    <h2>${formatearNombreMateria(materia)}</h2>
-                    <p>Información detallada sobre ${formatearNombreMateria(materia)} del Semestre ${semestre}.</p>
-                `;
-            }
-            
-            infoContainer.style.display = 'block';
-        };
-        buttonsContainer.appendChild(button);
-    });
-            } else {
-                // opciones genéricas (Opción 1, Opción 2, etc.) SOLO PARA NUEVOS else if
-                for (let i = 1; i <= 10; i++) {
-                    const button = document.createElement('button');
-                    button.innerText = `Opción ${i}`;
-                    button.onclick = () => mostrarInformacion(semestre, i);
-                    buttonsContainer.appendChild(button);
-                }
-            }
-
-            const closeButton = document.createElement('button');
-            closeButton.innerText = 'Cerrar';
-            closeButton.className = 'close-button';
-            closeButton.onclick = () => {
-                container.style.display = 'none';
-                infoContainer.style.display = 'none'; 
-            };
-
-            container.appendChild(buttonsContainer);
-            container.appendChild(closeButton);
-
-            container.style.display = 'flex';
-        }
-        
-        function mostrarInformacionAdicional() {
-            const infoContainer = document.getElementById('info-container');
-            infoContainer.innerHTML = `
-<h2>Aviso Legal y Derechos de Autor</h2>
-<ol>
-    <li>
-        <strong>Propiedad intelectual</strong><br>
-        Esta página web, incluyendo su diseño, código fuente, estructura, funcionalidades y contenido (excepto los logos y marcas registradas), es una obra intelectual creada y desarrollada por <strong>Emilio Calep Vargas Yáñez</strong>. Protegida por la <strong>Ley Federal del Derecho de Autor</strong> en México.
-    </li>
-    <li>
-        <strong>Cita de imágenes</strong><br>
-        Las imágenes utilizadas en esta página web, como el logotipo del Instituto Politécnico Nacional (IPN) y el logotipo del CECyT 9, están protegidas por derechos de autor y se citan como sigue:
-        <ul>
-            <li>Instituto Politécnico Nacional. (s.f.). Logotipo del IPN [Imagen]. Recuperado de <a href="https://www.ipn.mx" target="_blank">https://www.ipn.mx</a></li>
-            <li>Centro de Estudios Científicos y Tecnológicos Número 09 Juan de Dios Bátiz Paredes. (s.f.). Logotipo del CECyT 9 [Imagen]. Recuperado de <a href="https://www.cecyt9.ipn.mx/" target="_blank">https://www.cecyt9.ipn.mx/</a></li>
-        </ul>
-    </li>
-    <li>
-        <strong>Uso no lucrativo</strong><br>
-        Esta página web solo puede ser reproducida, distribuida o compartida con fines <strong>no lucrativos</strong>, siempre y cuando:
-        <ul>
-            <li>No se modifique, altere o mutile su contenido.</li>
-            <li>Se cite de manera explícita y completa la fuente original, incluyendo el nombre de la página y su dirección electrónica.</li>
-            <li>Se respete la autoría y los derechos de propiedad intelectual de su creador haciendo mención del mismo.</li>
-            <li>Se cumpla con la normativa vigente del <strong>Instituto Politécnico Nacional (IPN)</strong> en materia de páginas web y vinculación. Para más información, consulta: 
-                <a href="https://www.ipn.mx/vinculaci%C3%B3n/" target="_blank">https://www.ipn.mx/vinculaci%C3%B3n/</a>.
-            </li>
-        </ul>
-    </li>
-    <li>
-        <strong>Uso con fines comerciales o institucionales</strong><br>
-        Para cualquier uso que no sea estrictamente no lucrativo, incluyendo su reproducción, modificación o distribución con fines comerciales, se requiere <strong>autorización previa por parte</strong> del titular de los derechos de autor (<strong>Emilio Calep Vargas Yáñez</strong>) y, en su caso, de la <strong>autoridad correspondiente del Instituto Politécnico Nacional (IPN)</strong>.
-    </li>
-    <li>
-        <strong>Información de los maestros y personal administrativo</strong><br>
-        Los nombres de los maestros y personal administrativo mencionados en esta página web se incluyen únicamente con fines informativos y de organización de horarios de asesorías.</strong>
-    </li>
-    <li>
-        <strong>Limitación de responsabilidad</strong><br>
-        El creador de esta página web no asume responsabilidad alguna por el uso indebido o confusión por la información aquí proporcionada. Los usuarios son los únicos responsables de verificar la exactitud y actualidad de los horarios y datos publicados.
-    </li>
-    <li>
-        <strong>Reconocimiento a <a href="https://grupoemiliocolor.github.io/mx" target="_blank">Grupo EmilioColor®</a></strong><br>
-        Esta página web contó con el apoyo y asesoría de <strong><a href="https://grupoemiliocolor.github.io/mx" target="_blank">Grupo EmilioColor®</a></strong>, quien proporcionó orientación sobre el desarrollo del código y la gestión del dominio. Sin embargo, <strong><a href="https://grupoemiliocolor.github.io/mx" target="_blank">Grupo EmilioColor®</a></strong> no tiene derechos de autor ni propiedad sobre esta página web, su contenido o su funcionalidad.
-    </li>
-    <li>
-        <strong>Derechos reservados</strong><br>
-        Copyright © 2025. Quedan reservados todos los derechos de autor sobre esta página web. Cualquier uso no autorizado de este contenido podría constituir una infracción a los derechos de autor.
-    </li>
-</ol>
-            `;
-            infoContainer.style.display = 'block';
-        }
-
-        function mostrarInicio() {
-            const infoContainer = document.getElementById('info-container');
-            infoContainer.innerHTML = `
-                <h1>Bienvenido a la página de horarios de asesorías</h1>
-                <h3>Objetivo</h3>
-                <p>
-                    El objetivo de esta página es facilitar a los estudiantes, maestros y personal administrativo del <strong>CECyT 9 "Juan de Dios Bátiz"</strong> el acceso a los horarios de asesorías de la unidad académcia de manera rápida y organizada. Con esta herramienta, se busca mejorar la comunicación y optimizar el tiempo de todos los miembros de la comunidad educativa.
-                </p>
-                <h3>Instrucciones de uso</h3>
-                <ol>
-                    <li>
-                        <strong>Selecciona el semestre</strong>: En el menú de la izquierda, elige el semestre del cual deseas consultar los horarios de asesorías.
-                    </li>
-                    <li>
-                        <strong>Elige una opción</strong>: Una vez seleccionado el semestre, se desplegarán las materias con asesoría disponibles. Haz clic en la que desees consultar.
-                    </li>
-                    <li>
-                        <strong>Consulta la información</strong>: En el contenedor de la derecha, se mostrará la información detallada sobre la opción seleccionada.
-                    </li>
-                    <li>
-                        <strong>Cerrar la vista</strong>: Si deseas regresar al menú principal, haz clic en el botón "Cerrar".
-                    </li>
-                </ol>
-                 <p>
-                 En caso de encontrar imprecisiones en la información, se deberá enviar una solicitud de corrección a través del botón correspondiente, el cual redirigirá al correo electrónico designado para este propósito.
-                </p>
-            `;
-            infoContainer.style.display = 'block';
-        }
-
-        window.onload = mostrarInicio;
-    </script>
 </body>
 </html>
